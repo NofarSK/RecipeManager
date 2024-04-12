@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">RecipesApp</string>
+    <string name="recipes_manager">Recipes Manager</string>
+    <string name="sentence">The best recipes are ones that create lasting memories</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register">Register</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="recipes">Recipes</string>
+    <string name="search">Search</string>
+    <string name="categories">Categories</string>
+    <string name="favorite_recipes">Favorite Recipes</string>
+    <string name="edit_recipe">Edit Recipe</string>
+    <string name="recipe_name">Recipe name</string>
+    <string name="category">category</string>
+    <string name="prep_time">Prep Time</string>
+    <string name="directions">Directions</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="change_image">CHANGE IMAGE</string>
+    <string name="update">UPDATE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ingredients_title">Ingredients:</string>
+    <string name="directions_title">Directions:</string>
+    <string name="add_recipe">Add Recipe</string>
+    <string name="enter_recipe_name">Enter Recipe Name</string>
+    <string name="enter_preparation_time">Enter Preparation Time</string>
+    <string name="enter_ingredients">Enter Ingredients</string>
+    <string name="enter_directions">Enter Directions</string>
+    <string name="pick_image">PICK IMAGE</string>
+    <string name="add">ADD</string>
+    <string name="select_a_category">Select a category</string>
+    <string name="chicken">Chicken</string>
+    <string name="fish">Fish</string>
+    <string name="meat">Meat</string>
+    <string name="salads">Salads</string>
+    <string name="pastries">Pastries</string>
+    <string name="pastas">Pastas</string>
+    <string name="pizzas">Pizzas</string>
+    <string name="desserts">Desserts</string>
+    <string name="soups">Soups</string>
+    <string name="failed_to_read_value">" Failed to read value"</string>
+    <string name="hello">"Hello "</string>
+    <string name="register_fail">Register Fail</string>
+    <string name="register_successful">Register Successful</string>
+    <string name="fill_all_the_fields">Fill all the fields</string>
+    <string name="incorrect_username_or_password">Incorrect username or password</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="selected_category">"Selected category: "</string>
+    <string name="recipe_deleted">Recipe Deleted</string>
+    <string-array name="categories">
+        <item>Chicken</item>
+        <item>Meat</item>
+        <item>Fish</item>
+        <item>Desserts</item>
+        <item>Soups</item>
+        <item>Salads</item>
+        <item>Pastries</item>
+        <item>Pastas</item>
+        <item>Pizzas</item>
+    </string-array>
+
+</resources>

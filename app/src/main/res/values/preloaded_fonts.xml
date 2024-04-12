@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amethysta</item>
+        <item>@font/andada</item>
+        <item>@font/andika</item>
+        <item>@font/antic_slab</item>
+        <item>@font/averia_serif_libre_bold</item>
+        <item>@font/bai_jamjuree_extralight</item>
+        <item>@font/carter_one</item>
+        <item>@font/kaushan_script</item>
+    </array>
+</resources>

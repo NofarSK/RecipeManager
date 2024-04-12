@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecipesApp</string>
+    <string name="recipes_manager">ניהול מתכונים</string>
+    <string name="sentence">המתכונים הטובים ביותר הם אלה שיוצרים זיכרונות שנשארים לדורות</string>
+    <string name="login">התחבר</string>
+    <string name="sign_up">הירשם</string>
+    <string name="register">הרשמה</string>
+    <string name="enter_name">הכנס שם</string>
+    <string name="enter_email">הכנס מייל</string>
+    <string name="enter_password">הכנס סיסמא</string>
+    <string name="enter_phone">הכנס מס\' טלפון</string>
+    <string name="recipes">מתכונים</string>
+    <string name="search">חיפוש</string>
+    <string name="categories">קטגוריות</string>
+    <string name="favorite_recipes">מתכונים מועדפים</string>
+    <string name="edit_recipe">עריכת מתכון</string>
+    <string name="recipe_name">שם מתכון</string>
+    <string name="prep_time">זמן הכנה</string>
+    <string name="category">קטגוריה</string>
+    <string name="directions">הוראות הכנה</string>
+    <string name="ingredients">מצרכים</string>
+    <string name="change_image">שנה תמונה</string>
+    <string name="update">עדכן</string>
+    <string name="cancel">ביטול</string>
+    <string name="ingredients_title">מצרכים:</string>
+    <string name="directions_title">הוראות הכנה:</string>
+    <string name="add_recipe">הוספת מתכון</string>
+    <string name="enter_recipe_name">הכנס שם מתכון</string>
+    <string name="enter_preparation_time">הכנס זמן הכנה</string>
+    <string name="enter_ingredients">הכנס מצרכים</string>
+    <string name="enter_directions">הכנס הוראות הכנה</string>
+    <string name="pick_image">בחר תמונה</string>
+    <string name="add">הוסף</string>
+    <string name="select_a_category">החר קטגוריה</string>
+    <string name="chicken">עוף</string>
+    <string name="fish">דג</string>
+    <string name="meat">בשר</string>
+    <string name="salads">סלטים</string>
+    <string name="pastries">מאפים</string>
+    <string name="pastas">פסטות</string>
+    <string name="pizzas">פיצות</string>
+    <string name="desserts">קינוחים</string>
+    <string name="soups">מרקים</string>
+    <string name="failed_to_read_value">" נכשל בקריאת נתונים"</string>
+    <string name="hello">"שלום "</string>
+    <string name="register_fail">הרשמה נכשלה</string>
+    <string name="register_successful">נרשמת בהצלחה</string>
+    <string name="fill_all_the_fields">מלא את כל השדות</string>
+    <string name="incorrect_username_or_password">שם משתמש או סיסמא שגויים</string>
+    <string name="login_successful">התחברות הצליחה</string>
+    <string name="selected_category">"קטגוריה שנבחרה: "</string>
+    <string name="recipe_deleted">מתכון נמחק</string>
+    <string-array name="categories">
+        <item>עוף</item>
+        <item>בשר</item>
+        <item>דג</item>
+        <item>קינוחים</item>
+        <item>מרקים</item>
+        <item>סלטים</item>
+        <item>מאפים</item>
+        <item>פסטות</item>
+        <item>פיצות</item>
+    </string-array>
+
+</resources>
