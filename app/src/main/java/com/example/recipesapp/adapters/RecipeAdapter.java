@@ -34,17 +34,13 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHold
     private ArrayList<Recipe> dataSet;
     private ItemClickListener itemClickListener;
 
-    private ImagePickerListener imagePickerListener;
-    private static final int REQUEST_CODE_PICK_IMAGE = 1001;
     private Context context;
 
-    //private static final int REQUEST_CODE_PICK_IMAGE = 1001;
-    public RecipeAdapter(ArrayList<Recipe> dataSet , ItemClickListener itemClickListener,Context context ,ImagePickerListener imagePickerListener){
+    public RecipeAdapter(ArrayList<Recipe> dataSet , ItemClickListener itemClickListener,Context context ){
 
         this.dataSet = dataSet;
         this.itemClickListener = itemClickListener;
         this.context = context;
-        this.imagePickerListener = imagePickerListener;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
@@ -85,7 +81,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHold
         });
 
         holder.editBtn.setOnClickListener(v -> {
-            showEditDialog(position , recipe.getPhoto());
+            showEditDialog(position);
         });
 
         if (recipe.getPhoto() != null && !recipe.getPhoto().isEmpty()) {
@@ -123,11 +119,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHold
         void  onItemClick(Recipe details);
     }
 
-    public interface ImagePickerListener {
-        void onImagePicked(int position, Uri imageUri);
-    }
 
-    public void showEditDialog(int position , String image) {
+    public void showEditDialog(int position ) {
         Recipe recipe = dataSet.get(position);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -136,57 +129,26 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHold
 
         TextInputEditText editNameRecipe = dialogView.findViewById(R.id.edit_recipe_name);
         TextInputEditText editTimeRecipe = dialogView.findViewById(R.id.edit_prep_time_input);
-        ImageView editImageRecipe = dialogView.findViewById(R.id.edit_image_food);
         TextInputEditText editIngredientsRecipe = dialogView.findViewById(R.id.edit_ingredients_input);
         TextInputEditText editDirectionsRecipe = dialogView.findViewById(R.id.edit_directions_input);
-        TextView category = dialogView.findViewById(R.id.category_edit);
 
-        category.setText("Category: " + recipe.getCategory());
+
         editNameRecipe.setText(recipe.getRecipeName());
         editTimeRecipe.setText(recipe.getPrepTime());
         editIngredientsRecipe.setText(recipe.getIngredients());
         editDirectionsRecipe.setText(recipe.getDirections());
 
 
-        Glide.with(context)
-                .load(image)
-                .into(editImageRecipe);
-
 
         String oldName = recipe.getRecipeName();
         String oldCategory = recipe.getCategory();
 
-        Button changeImage = dialogView.findViewById(R.id.change_image);
+
         Button cancelButton = dialogView.findViewById(R.id.cancel_button);
         Button saveButton = dialogView.findViewById(R.id.update_btn);
 
 
         AlertDialog dialog = builder.create();
-
-/*
-
-        changeImage.setOnClickListener(v -> {
-
-            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("image/*");
-            //startActivityForResult(intent, REQUEST_CODE_PICK_IMAGE);
-            //Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            MainActivity mainActivity = (MainActivity) context;
-            mainActivity.onEditDialogClosed(position, recipe);
-            ((MainActivity) context).startActivityForResult(intent, REQUEST_CODE_PICK_IMAGE, imagePickerListener);
-
-
-            */
-/*Glide.with(context)
-                    .load(mainActivity.selectedImageUri)
-                    .into(editImageRecipe);*//*
-
-            //Picasso.get().load(recipe.getPhoto()).into(editImageRecipe);
-
-        });
-*/
-
 
 
         cancelButton.setOnClickListener(v -> dialog.dismiss());

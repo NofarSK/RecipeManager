@@ -38,10 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
     private String userId;
     private FirebaseDatabase database;
-    private static final int REQUEST_CODE_PICK_IMAGE = 1001;
-    private RecipeAdapter.ImagePickerListener imagePickerListener;
-    private int selectedPosition;
-    public Uri selectedImageUri;
+
 
 
     @Override
@@ -273,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView directionsRecipe = findViewById(R.id.detail_directions);
 
                 nameRecipe.setText(value.getRecipeName());
-                timeRecipe.setText("   "+value.getPrepTime());
+                timeRecipe.setText("      "+value.getPrepTime());
                 ingredientsRecipe.setText("\n"+value.getIngredients());
                 directionsRecipe.setText("\n"+value.getDirections());
 
@@ -328,29 +325,6 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("favorite").child(userId).child(recipeName);
         myRef.removeValue();
     }
-
-
-
-    public void onEditDialogClosed(int position, Recipe recipe) {
-        selectedPosition = position;
-
-    }
-    public void startActivityForResult(Intent intent, int requestCode, RecipeAdapter.ImagePickerListener listener) {
-        this.imagePickerListener = listener;
-        super.startActivityForResult(intent, requestCode);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_PICK_IMAGE && resultCode == RESULT_OK && data != null) {
-            selectedImageUri = data.getData();
-
-            imagePickerListener.onImagePicked(selectedPosition, selectedImageUri);
-
-        }
-    }
-
 
 
     public void updateRecipe(Recipe recipe, String oldName, String oldCategory) {

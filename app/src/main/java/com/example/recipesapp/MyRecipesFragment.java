@@ -22,8 +22,6 @@ import java.util.ArrayList;
 
 public class MyRecipesFragment extends Fragment {
 
-
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -77,9 +75,7 @@ public class MyRecipesFragment extends Fragment {
         GridLayoutManager layoutManager = new GridLayoutManager(requireContext(), 2);
         recyclerView.setLayoutManager(layoutManager);
 
-        //String[] categories1 = CategoryData.getCategories();
 
-        //CategoryData.init(requireContext());
         for (int i = 0; i < CategoryData.categories.length ; i++ ){
             dataSet.add(new CategoryModel(
                     CategoryData.categories[i],
@@ -87,14 +83,6 @@ public class MyRecipesFragment extends Fragment {
             ));
         }
 
-        /*for (String category : categories1 ){
-            int i=1;
-            dataSet.add(new CategoryModel(
-                    category,
-                    CategoryData.drawableArray[i]
-
-            ));
-        }*/
 
         CategoryAdapter adapter = new CategoryAdapter(dataSet, new CategoryAdapter.ItemClickListener() {
             @Override

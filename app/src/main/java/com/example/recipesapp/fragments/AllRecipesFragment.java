@@ -114,16 +114,7 @@ public class AllRecipesFragment extends Fragment {
                 bundle.putString("image", details.getPhoto());
                 Navigation.findNavController(view).navigate(R.id.action_allRecipesFragment_to_detailsRecipeFragment, bundle);
             }
-        }, requireContext(), new RecipeAdapter.ImagePickerListener() {
-            @Override
-            public void onImagePicked(int position, Uri imageUri) {
-
-                Recipe recipe = recipeList.get(position);
-                recipe.setPhoto(imageUri.toString());
-
-                adapter.notifyItemChanged(position);
-            }
-        });
+        }, requireContext());
         recyclerView.setAdapter(adapter);
 
         MainActivity mainActivity = (MainActivity) getActivity();
