@@ -6,7 +6,7 @@ import com.example.recipesapp.R;
 
 public class CategoryData {
 
-    static String[] categories = {"Chsicken", "Meat", "Fish", "Desserts", "Soups",
+    static String[] categories = {"Chicken", "Meat", "Fish", "Desserts", "Soups",
             "Salads", "Pastries", "Pastas", "Pizzas"};
 
     static Integer[] drawableArray={R.drawable.chikenre, R.drawable.meat,R.drawable.fish1,
