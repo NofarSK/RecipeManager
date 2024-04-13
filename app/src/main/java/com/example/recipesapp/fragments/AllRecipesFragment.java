@@ -79,7 +79,7 @@ public class AllRecipesFragment extends Fragment {
         String category;
         category = getArguments().getString("category");
 
-        title.setText(category + getString(R.string.recipes));
+        title.setText(category + " "+getString(R.string.recipes));
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_recipes);
         recyclerView.setHasFixedSize(true);
